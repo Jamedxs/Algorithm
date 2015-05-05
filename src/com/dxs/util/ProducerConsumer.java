@@ -21,17 +21,17 @@ public class ProducerConsumer {
                 synchronized (BOX) {
                     try {
                         while (BOX.size() == MAX) {
-                            System.out.println("Ïä×ÓÖĞÆ»¹ûÊÇÂúµÄ£¬ÇëµÈ´ı¡£¡£¡£");
+                            System.out.println("ç®±å­ä¸­è‹¹æœå·²æ»¡ï¼Œè¯·ç­‰å¾…ã€‚ã€‚");
                             BOX.wait();
                         }
                         Apple apple = new Apple();//
                         if (BOX.add(apple)) {
-                            System.out.println("Ò»¸öÈË·ÅÆ»¹û½øÈëÁËÏä×Ó");
+                            System.out.println("å‘ç®±å­ä¸­æ”¾å…¥è‹¹æœã€‚ã€‚");
                             Thread.sleep((long) (Math.random() * 3000));
                             BOX.notify();
                         }
                     } catch (InterruptedException ie) {
-                        System.out.println("·ÅÆ»¹ûµÄÈË±»Òì³£ÖĞ¶ÏÁË!");
+                        System.out.println("ç”Ÿäº§è€…ç”Ÿäº§è‹¹æœå‡ºç°å¼‚å¸¸!");
                     }
 
                 }
@@ -45,15 +45,15 @@ public class ProducerConsumer {
                 synchronized (BOX) {
                     try {
                         while (BOX.size() == 0) {
-                            System.out.println("Ïä×ÓÖĞÃ»ÓĞÆ»¹û£¬ÇëµÈ´ı¡£¡£¡£");
+                            System.out.println("ç®±å­ä¸­æ²¡æœ‰è‹¹æœï¼Œè¯·ç­‰å¾…ã€‚ã€‚");
                             BOX.wait();
                         }
                         BOX.removeLast();
-                        System.out.println("°®³ÔÆ»¹ûµÄÈË´ÓÏä×ÓÀïÈ¡³öÁËÒ»¸öÆ»¹û");
+                        System.out.println("ç®±å­ä¸­çš„è‹¹æœè¢«å–å‡ºã€‚ã€‚");
                         Thread.sleep((long) (Math.random() * 3000));
                         BOX.notify();
                     } catch (InterruptedException ie) {
-                        System.out.println("³ÔÆ»¹ûµÄÈË±»Òì³£ÖĞ¶ÏÁË!");
+                        System.out.println("æ¶ˆè´¹è€…åƒè‹¹æœæ—¶å‡ºç°å¼‚å¸¸!");
                     }
 
                 }
@@ -61,7 +61,7 @@ public class ProducerConsumer {
 
         }
     }
-    class Apple{//ÕâÊÇÒ»¸öÆ»¹û¶ÔÏó
+    class Apple{//ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½Æ»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
     	}
     public static void main(String[] args) {
     	 ProducerConsumer pc = new ProducerConsumer();
