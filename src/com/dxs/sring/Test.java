@@ -1,5 +1,7 @@
 package com.dxs.sring;
 
+import java.util.Map;
+
 public class Test {
 
 	/**

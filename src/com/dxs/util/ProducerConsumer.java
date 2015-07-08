@@ -61,7 +61,7 @@ public class ProducerConsumer {
 
         }
     }
-    class Apple{//����һ��ƻ������
+    class Apple{//苹果类
     	}
     public static void main(String[] args) {
     	 ProducerConsumer pc = new ProducerConsumer();
