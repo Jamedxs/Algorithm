@@ -8,10 +8,14 @@ public class Test {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		String s = new String();
+		/*String s = new String();
 		System.out.println(s.length());
 		System.out.println(s);
-		System.out.println(s.length());
+		System.out.println(s.length());*/
+		int i;
+		//System.out.println(Integer.toBinaryString(i));
+		i = (i = 22) ^ i >>> 1;
+		System.out.println(Integer.toBinaryString(i));
 	}
 
 	public class BusyFlag{
