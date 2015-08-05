@@ -12,11 +12,36 @@ public class Test {
 		System.out.println(s.length());
 		System.out.println(s);
 		System.out.println(s.length());*/
-		int i;
+		//int i;
 		//System.out.println(Integer.toBinaryString(i));
-		i = (i = 22) ^ i >>> 1;
-		System.out.println(Integer.toBinaryString(i));
+		//i = (i = 22) ^ i >>> 1;
+		//System.out.println(Integer.toBinaryString(i));
+		int[] sum = new int[31];
+ 		int pos = 0;
+		int neg = 0;
+		int k = 0;
+		for (int i = 1000; i > 0; i--) {
+			int count = 0;
+			for (int j = 1; j <= i; j++) {				
+				if(i%j == 0){
+					count++;
+				}
+			}
+			if(count%2 == 0){
+				pos++;
+			}else{
+				neg++;
+				sum[k++] = i;
+			}
+		}
+		System.out.println("正面数量"+pos);
+		System.out.println("反面数量"+neg);
+		for (int i = 0; i < sum.length; i++) {
+			System.out.println(sum[i]);
+		}
 	}
+	
+
 
 	public class BusyFlag{
 		protected Thread busyflag = null;

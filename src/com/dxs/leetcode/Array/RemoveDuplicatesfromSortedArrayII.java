@@ -1,9 +1,9 @@
-package com.dxs.leetcode;
+package com.dxs.leetcode.Array;
 
 public class RemoveDuplicatesfromSortedArrayII {
 
 	/**
-	 * Follow up for ¡±Remove Duplicates¡±: What if duplicates are allowed at most
+	 * Follow up for ï¿½ï¿½Remove Duplicatesï¿½ï¿½: What if duplicates are allowed at most
 	 * twice? For example, Given sorted array A = [1,1,1,2,2,3] , Your function
 	 * should return length = 5, and A is now [1,1,2,2,3]
 	 */

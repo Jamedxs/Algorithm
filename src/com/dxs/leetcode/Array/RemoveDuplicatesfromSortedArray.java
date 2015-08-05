@@ -1,4 +1,4 @@
-package com.dxs.leetcode;
+package com.dxs.leetcode.Array;
 
 public class RemoveDuplicatesfromSortedArray {
 

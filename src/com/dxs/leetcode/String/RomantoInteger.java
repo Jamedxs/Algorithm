@@ -1,4 +1,4 @@
-package com.dxs.leetcode;
+package com.dxs.leetcode.String;
 
 public class RomantoInteger {
 	public static int romanToInt(String s) {

@@ -1,4 +1,4 @@
-package com.dxs.leetcode;
+package com.dxs.leetcode.Stack;
 
 import java.util.Stack;
 
@@ -24,7 +24,7 @@ public class ValidParentheses {
 			char ch = s.charAt(i);
 			if(ch == '(' || ch == '{' || ch == '[')
 			{
-				//×óÀ¨ºÅ Ñ¹Õ»
+				//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Ñ¹Õ»
 				stack.push(ch);
 			}else if(stack.empty() == false)
 			{
