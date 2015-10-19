@@ -1,4 +1,4 @@
-package com.dxs.qunaer;
+package com.dxs.exam.qunaer;
 
 public class CommandParser {
 
@@ -15,8 +15,8 @@ public class CommandParser {
     static String parser(String str){  
         String params[] = str.split("-");  
         for(int i=0;i<params.length;i++){  
-            params[i]=params[i].trim();//È¥µôÇ°ºó¿Õ¸ñ  
-            params[i]=params[i].replaceAll("\\s+", " ");//È¥µôÖÐ¼ä¿Õ¸ñ  
+            params[i]=params[i].trim();//È¥ï¿½ï¿½Ç°ï¿½ï¿½Õ¸ï¿½  
+            params[i]=params[i].replaceAll("\\s+", " ");//È¥ï¿½ï¿½ï¿½Ð¼ï¿½Õ¸ï¿½  
         }  
         StringBuffer sb = new StringBuffer();  
         sb.append("[");  

@@ -1,9 +1,9 @@
-package com.dxs.qunaer;
+package com.dxs.exam.qunaer;
 
 public class DecryptionString {
 
 	/**
-	 * ¸ø×Ö·û½âÃÜ£¬½âÃÜµÄ¹æÔòÈçÏÂ£¬a2bc3c5e6,½âÃÜÖ®ºóµÄ½á¹ûÊÇ£ºaabcbcbcccceeeeee,ÆäÖĞÕûÊıµÄÖµ²»³¬¹ıÕûĞÍµÄ×î´óÖµ
+	 * ï¿½ï¿½ï¿½Ö·ï¿½ï¿½ï¿½ï¿½Ü£ï¿½ï¿½ï¿½ï¿½ÜµÄ¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Â£ï¿½a2bc3c5e6,ï¿½ï¿½ï¿½ï¿½Ö®ï¿½ï¿½Ä½ï¿½ï¿½ï¿½Ç£ï¿½aabcbcbcccceeeeee,ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Öµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Íµï¿½ï¿½ï¿½ï¿½Öµ
 	 */
 	public static void main(String[] args) {
 		String s1 = "a2bc3d1";
@@ -18,14 +18,14 @@ public class DecryptionString {
 	
 	private static String decode(String str){
 		int N = str.length();
-		int k = 0;//¼ÇÂ¼Êı×ÖÏÂ±ê
+		int k = 0;//ï¿½ï¿½Â¼ï¿½ï¿½ï¿½ï¿½ï¿½Â±ï¿½
 		StringBuilder sbNumber = new StringBuilder();
 		StringBuilder sbCharacter = new StringBuilder();
 		StringBuilder sb = new StringBuilder();
 		boolean flag = false;
 		
 		for (int i = 0; i < N; i++) {
-			if(judgeNumber(str.charAt(i))){//Èç¹ûÎªÊı×Ö
+			if(judgeNumber(str.charAt(i))){//ï¿½ï¿½ï¿½Îªï¿½ï¿½ï¿½ï¿½
 				sbNumber.append(str.charAt(i));
 				k = Integer.valueOf(sbNumber.toString());
 				flag = true;
@@ -38,11 +38,11 @@ public class DecryptionString {
 					sbNumber.delete(0, sbNumber.length());
 					sbCharacter.delete(0, sbCharacter.length());
 				}
-				//×Ö·û 
+				//ï¿½Ö·ï¿½ 
 				sbCharacter.append(str.charAt(i));
 			}
 		}
-		for (int i = 0; i < k; i++) {//×îºóÒ»Î»ÊÇÊı×ÖµÄÇé¿ö
+		for (int i = 0; i < k; i++) {//ï¿½ï¿½ï¿½Ò»Î»ï¿½ï¿½ï¿½ï¿½ï¿½Öµï¿½ï¿½ï¿½ï¿½
 			sb.append(sbCharacter);
 		}
 		return sb.toString();

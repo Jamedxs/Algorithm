@@ -1,4 +1,4 @@
-package com.dxs.qunaer;
+package com.dxs.exam.qunaer;
 
 public class DifferentString {
 

@@ -1,4 +1,4 @@
-package com.dxs.qunaer;
+package com.dxs.exam.qunaer;
 
 public class CycleOrderedArray {
 
@@ -18,14 +18,14 @@ public class CycleOrderedArray {
 		while(lo <= hi){
 			mid = (lo + hi)/2;
 			if(array[mid] == target) return mid;
-			else if(array[lo] < array[mid]){//Ç°°ë²¿·ÖÓÐÐò£¬ºó°ë²¿·ÖÑ­»·ÓÐÐò
+			else if(array[lo] < array[mid]){//Ç°ï¿½ë²¿ï¿½ï¿½ï¿½ï¿½ï¿½ò£¬ºï¿½ë²¿ï¿½ï¿½Ñ­ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 				if(target > array[lo] && target < array[mid]){
 					hi = mid - 1;
 				}
 				else{
 					lo = mid + 1;
 				}
-			}else{//ºó°ë²¿·ÖÓÐÐò£¬Ç°°ë²¿·ÖÑ­»·ÓÐÐò
+			}else{//ï¿½ï¿½ë²¿ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ç°ï¿½ë²¿ï¿½ï¿½Ñ­ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 				if(target > array[mid] && target < array[hi]){
 					lo = mid + 1;
 				}else{
