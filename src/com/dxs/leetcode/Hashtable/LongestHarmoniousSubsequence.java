@@ -40,6 +40,27 @@ public class LongestHarmoniousSubsequence {
 		}
         return res;
     }
+	
+	public int findLHS2(int[] nums) {
+        Map<Integer,Integer> map = new HashMap<Integer,Integer>();
+        int res = 0;
+        for (int num : nums) {
+			Integer k = map.get(num);
+			if(k == null){
+				map.put(num, 1);
+			}else{
+				map.put(num, k+1);
+			}
+			
+			if (map.containsKey(num + 1))
+                res = Math.max(res, map.get(num) + map.get(num + 1));
+            if (map.containsKey(num - 1))
+                res = Math.max(res, map.get(num) + map.get(num - 1));
+		}
+        
+        return res;
+    }
+	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
