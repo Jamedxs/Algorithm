@@ -2,7 +2,7 @@ package com.dxs.tree;
 
 import java.util.Stack;
 
-import sun.org.mozilla.javascript.internal.Node;
+//import sun.org.mozilla.javascript.internal.Node;
 
 /**
  * @author dengxusheng	
